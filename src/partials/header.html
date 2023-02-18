@@ -1,0 +1,59 @@
+<header class="header">
+  <div class="container header__container">
+    <div class="header__box">
+      <div class="logo">
+        <a href="./index.html" class="logo__icon">
+          <img
+            src="./images/header/film.svg"
+            alt="Logo icon"
+            width="24"
+            height="24"
+            class="logo__svg"
+          />
+        </a>
+        <a class="logo__text" href="./index.html">Filmoteka</a>
+      </div>
+      <div class="auth">
+        <button type="button" class="auth-btn" data-auth-open>
+          <img
+            src="./images/header/icons-avtorize.png"
+            alt="user-icon"
+            id="auth-btn-icon"
+            class="auth-btn__img"
+            width="13"
+            height="13"
+          />
+        </button>
+        <button id="log-out-btn" class="auth-btn">Log out</button>
+      </div>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a
+              href="./index.html"
+              class="header__nav-link header__nav-link__current"
+            >
+              HOME
+            </a>
+          </li>
+          <li class="header__nav-item library-item">
+            <a href="./library.html" class="header__nav-link">MY LIBRARY</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <form action="submit" class="form">
+      <input
+        type="input"
+        class="form__input searchInput"
+        name="search-input"
+        placeholder="Movie search"
+      />
+      <button type="submit" class="form__search-svg" aria-label="search">
+        <img src="./images/header/search.svg" alt="" />
+      </button>
+    </form>
+    <p class="form__search-fail"></p>
+  </div>
+</header>

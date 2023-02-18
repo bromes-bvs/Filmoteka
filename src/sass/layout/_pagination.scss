@@ -1,0 +1,37 @@
+div.tui-pagination {
+    height: 28px;
+    margin: 73px 0 71px;
+    line-height: normal;
+    text-align: center;
+
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        margin: 53px 0 51px;
+    }
+}
+
+div.tui-pagination .tui-page-btn {
+    display: inline-block;
+    position: relative;
+    width: 28px;
+    padding: 8px 0 6px;
+    margin-left: 0;
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1;
+    text-decoration: none;
+    vertical-align: middle;
+    border: none;
+}
+
+div.tui-pagination .tui-page-btn:hover {
+    background-color: #ff6b01;
+    color: $white-color;
+}
+
+div.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+    color: $white-color;
+    background-color: #ff6b01;
+}

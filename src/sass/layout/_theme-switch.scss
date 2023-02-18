@@ -1,0 +1,167 @@
+body.light-theme {
+  background-color: #fff;
+  color: $black-color;
+  .footer {
+    background-color: $grey-bg-color;
+  }
+  .footer__text {
+    color: $grey-color;
+  }
+  .modal {
+    background-color: $white-color;
+  }
+  .tui-pagination .tui-page-btn {
+    border: none;
+  }
+}
+
+body.dark-theme {
+  background-color: $dark-theme-bg-color;
+
+  .gallery_info-title {
+    color: $white-color;
+  }
+  .empty-gallery {
+    color: $white-color;
+  }
+  .footer {
+    background-color: $dark-theme-footer-bg-color;
+  }
+
+  .footer__text {
+    color: $white-color;
+  }
+
+  .tui-pagination .tui-is-selected {
+    background-color: $btn-accent-color;
+    color: $white-color;
+  }
+
+    div.tui-pagination .tui-page-btn:hover {
+      background-color: #ff6b01;
+      color: $white-color;
+    }
+
+        div.tui-pagination 
+        .tui-is-selected,
+        .tui-pagination strong {
+          color: $white-color;
+          background-color: #ff6b01;
+        }
+
+  .tui-pagination .tui-page-btn {
+    color: $white-color;
+    border: none;
+  }
+
+// div.tui-pagination 
+// .tui-ico-first,
+// .tui-ico-last,
+// .tui-ico-next,
+// .tui-ico-prev {
+//   fill: $btn-accent-color;
+// }
+
+  .modal {
+    background-color: $dark-theme-bg-color;
+  }
+
+  .film__about-text,
+  .film__about,
+  .film__title,
+  .film__original-text,
+  .film__genre-text,
+  .film__properties-text,
+  .film__popularity-text {
+    color: $white-color;
+  }
+
+  .modal__close-btn {
+    background-image: url(/src/images/close_white.svg);
+  }
+
+  .theme-switch__marker {
+    background-image: url(/src/images/change_theme/moon-svgrepo_2.svg);
+  }
+}
+
+.theme-switch {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  right: 20px;
+  top: 0;
+  @media screen and (max-width: 450px) {
+    right: 20px;
+    }
+}
+
+.theme-switch__control {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 50px;
+  height: 20px;
+  border-radius: 50em;
+  padding: 3px 0;
+
+@media screen and (max-width: 450px) {
+    width: 40px;
+    height: 15px;
+  }
+
+}
+
+.theme-switch__toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.theme-switch__track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  user-select: none;
+  background-color: #333;
+  border-radius: inherit;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.theme-switch__marker {
+  position: relative;
+  background-image: url(/src/images/change_theme/sun-151763_1.svg);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  transform: translateX(3px);
+  transition: transform 250ms var(--timing-function);
+
+}
+
+.theme-switch__toggle:checked+.theme-switch__track {
+  background-color: $white-color;
+}
+
+.theme-switch__toggle:checked~.theme-switch__marker {
+  transform: translateX(23px); 
+
+  @media screen and (min-width: 450px) {
+    transform: translateX(32px);
+  }
+}

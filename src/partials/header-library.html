@@ -1,0 +1,71 @@
+<header class="header header__library">
+  <div class="container header__container">
+    <div class="header__box">
+      <div class="logo">
+        <a href="./index.html" class="logo__icon">
+          <img
+            src="./images/header/film.svg"
+            alt="Logo icon"
+            width="24"
+            height="24"
+            class="logo__svg"
+          />
+        </a>
+        <a class="logo__text" href="./index.html">Filmoteka</a>
+      </div>
+      <div class="auth">
+        <button type="button" class="auth-btn" data-auth-open>
+          <img
+            src="./images/header/icons-avtorize.png"
+            alt="user-icon"
+            id="auth-btn-icon"
+            class="auth-btn__img"
+            width="13"
+            height="13"
+          />
+        </button>
+        <button id="log-out-btn" class="auth-btn">Log out</button>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="./index.html" class="header__nav-link"> HOME </a>
+          </li>
+          <li class="header__nav-item library-item">
+            <a
+              href="./library.html"
+              class="header__nav-link header__nav-link__current"
+              >MY LIBRARY</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="library-buttons library-buttons__wrapper">
+      <button
+        class="library-buttons__item is-active"
+        type="button"
+        data-id="watched-btn"
+        data-action="watched"
+      >
+        Watched
+      </button>
+      <button
+        class="library-buttons__item"
+        type="button"
+        data-id="queue-btn"
+        data-action="queue"
+      >
+        queue
+      </button>
+    </div>
+  </div>
+</header>
+<!-- <section>
+  <div class="container">
+    
+    <ul class="galleryLib"></ul>
+    <div id="tui-pagination-container" class="tui-pagination"></div>
+  </div>
+  <a id="go-top"></a>
+</section> -->

@@ -1,0 +1,142 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-top: 60px;
+    gap: 32px;
+  }
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    gap: 32px 16px;
+  }
+}
+
+.empty-gallery {
+display: block;
+text-align: center;
+
+  & img {
+margin: 0 auto 20px;
+  }
+}
+
+.gallery-card {
+  width: 280px;
+  min-height: 440px;
+  cursor: pointer;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 336px;
+    min-height: 494px;
+  }
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    width: 394px;
+    min-height: 634px;
+  }
+}
+
+.poster {
+  width: 280px;
+  height: 402px;
+  border-radius: 5px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 336px;
+    height: 455px;
+  }
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    width: 394px;
+    height: 574px;
+  }
+}
+
+.gallery_info {
+  margin-top: 10px;
+  font-size: 12px;
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-top: 8px;
+  }
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    margin-top: 12px;
+
+    font-size: 20px;
+  }
+}
+
+.gallery_info-title {
+  display: block;
+  line-height: 1.17;
+  color: $black-color;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    line-height: 1.33;
+  }
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    line-height: 1.2;
+  }
+}
+
+.gallery_info-genres, .gallery_info-year {
+  line-height: 1.33;
+  color: $text-accent-color;
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    line-height: 1.2;
+  }
+}
+
+.gallery_info-year {
+  padding-left: 5px;
+  margin-right: 8px;
+  border-left: 1px solid $text-accent-color;
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    padding-left: 7px;
+  }
+}
+
+.gallery_info-genres {
+  padding-right: 3px;
+}
+
+.gallery_info-rating {
+  width: 36px;
+  height: 16px;
+  line-height: 1.17;
+  padding: 1px 6px;
+
+  color: $white-color;
+  background-color: $btn-accent-color;
+  border-radius: 5px;
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    width: 40px;
+    height: 20px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+
+

@@ -1,0 +1,207 @@
+.header {
+  min-width: 320px;
+  min-height: 230px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    min-height: 216px;
+  }
+
+  background-image: url('../images/header/header-mobile1x.jpg');
+  background-color: $black-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/header/header-mobile2x.jpg');
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    background-image: url('../images/header/header-tablet1x.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/header/header-tablet2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    background-image: url('../images/header/header-desktop1xn.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/header/header-desktop2x.jpg');
+    }
+  }
+
+  &__box {
+    display: flex;
+    margin-bottom: 54px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 56px;
+    @media screen and (min-width: $breakpoint-tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-item {
+    font-size: 12px;
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  &__nav-link {
+    color: $white-color;
+    position: relative;
+    &__current::after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: red;
+      display: block;
+      position: absolute;
+    }
+  }
+}
+
+.header__container {
+  padding-top: 40px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding-left: 32px;
+    padding-right: 34px;
+  }
+  @media screen and (min-width: $breakpoint-decktop) {
+    padding-right: 32px;
+  }
+}
+
+.logo {
+  display: flex;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    align-items: center;
+  }
+
+  &__svg {
+    margin-right: 5px;
+    @media screen and (min-width: $breakpoint-tablet) {
+      margin-right: 0px;
+    }
+  }
+
+  &__text {
+    @media screen and (max-width: ($breakpoint-tablet - 1px)) {
+      display: none;
+    }
+    @media screen and (min-width: $breakpoint-tablet) {
+      margin-left: 10px;
+      font-size: 30px;
+      display: flex;
+      color: $white-color;
+    }
+  }
+}
+
+.auth {
+  margin-left: auto;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__link {
+    margin-right: 10px;
+  }
+  &__text {
+    color: $white-color;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}
+
+.auth-btn {
+  display: none;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.form {
+  border-bottom: 0.5px solid $white-color;
+  font-size: 14px;
+  position: relative;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 0.5px solid #ff6b08;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 336px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $breakpoint-decktop) {
+    width: 394px;
+  }
+
+  &__input::placeholder {
+    color: $white-color;
+  }
+
+  &__search-svg {
+    background: 0 0;
+    position: absolute;
+    border: none;
+    top: 4px;
+    right: 4px;
+  }
+
+  &__search-fail {
+    color: $red-color;
+    margin-top: 20px;
+    font-size: 14px;
+    @media screen and (min-width: $breakpoint-tablet) {
+      text-align: center;
+    }
+  }
+}
+
+.is-hidden-text {
+  display: none;
+}
+
+.searchInput {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  color: $white-color;
+  outline: none;
+  padding: 4px 0px;
+}
+
+.auth__text {
+  @media screen and (max-width: ($breakpoint-tablet - 1px)) {
+    display: none;
+  }
+}

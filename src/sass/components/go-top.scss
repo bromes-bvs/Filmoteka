@@ -1,0 +1,78 @@
+#go-top {
+  position: fixed;
+  z-index: 105;
+  bottom: 30px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 10px;
+  }
+
+  // @media screen and (min-width: $breakpoint-decktop) {
+  //   width: 50px;
+  //   height: 50px;
+  //   bottom: 50px;
+  //   right: 50px;
+  // }
+
+  &:hover {
+    -webkit-box-shadow: 0px 0px 5px 4px orange;
+    -moz-box-shadow: 0px 0px 5px 4px orange;
+    box-shadow: 0px 0px 5px 4px orange;
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 33%;
+    bottom: 85%;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid orange;
+    border-bottom: 2px solid orange;
+    animation: arrow 2s linear infinite;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      left: 30%;
+      bottom: 60%;
+      width: 20px;
+      height: 20px;
+    }
+    // @media screen and (min-width: $breakpoint-decktop) {
+    //   width: 25px;
+    //   height: 25px;
+    // }
+
+  }
+
+
+
+  &:after {
+    animation: arrow 2s linear infinite -1s;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    transform: translate(0, 28px) rotate(135deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 17px) rotate(135deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 6px) rotate(135deg);
+  }
+}
