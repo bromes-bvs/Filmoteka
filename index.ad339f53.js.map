@@ -1,0 +1,1 @@
+{"mappings":"qeACA,EADAA,EAAA,SACAC","sources":["src/scripts/index.js"],"sourcesContent":["import { markupPopularFilms} from './gallery';\nmarkupPopularFilms();"],"names":["parcelRequire","markupPopularFilms"],"version":3,"file":"index.ad339f53.js.map"}
