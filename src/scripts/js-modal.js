@@ -43,7 +43,7 @@ function openModal() {
 
 function closeModal() {
   modal.classList.add('is-hidden-modal');
-  document.body.classList.remove('stop-scroll');
+  // document.body.classList.remove('stop-scroll');
   window.removeEventListener('click', handleClickOnBackdrop);
   window.removeEventListener('keydown', handleKeyPress);
 
@@ -51,6 +51,10 @@ function closeModal() {
   const addQueueBtn = document.querySelector('.film__button-add-to-queue');
   addWatchBtn.removeEventListener('click', handleWatchClick);
   addQueueBtn.removeEventListener('click', handleQueueClick);
+
+  setTimeout(() => {
+    document.body.classList.remove('stop-scroll');
+  }, 400);
 
   setTimeout(() => {
     containerElem.innerHTML = '';
