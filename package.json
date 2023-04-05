@@ -4,7 +4,7 @@
   "description": "This project was created with Parcel. For familiarization and setting additional features [refer to documentation](https://parceljs.org/).",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/*.html --public-url /Filmoteka/"
+    "build": "parcel build src/*.html"
   },
   "repository": {
     "type": "git",
