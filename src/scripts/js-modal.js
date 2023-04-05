@@ -52,7 +52,11 @@ function closeModal() {
   addWatchBtn.removeEventListener('click', handleWatchClick);
   addQueueBtn.removeEventListener('click', handleQueueClick);
 
-  containerElem.innerHTML = '';
+  setTimeout(() => {
+    containerElem.innerHTML = '';
+  }, 1000);
+
+  // containerElem.innerHTML = '';
 }
 
 function handleKeyPress(e) {

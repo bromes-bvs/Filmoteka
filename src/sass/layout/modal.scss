@@ -4,7 +4,7 @@ body.stop-scroll {
 }
 
 .backdrop {
-  overflow: scroll;
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,10 +19,10 @@ body.stop-scroll {
   background-color: rgba(0, 0, 0, 0.2);
 
   @media screen and (min-width: $breakpoint-tablet) {
-    overflow: scroll;
+    overflow-y: scroll;
   }
   @media screen and (min-width: $breakpoint-decktop) {
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
 
@@ -33,12 +33,7 @@ body.stop-scroll {
 }
 
 .modal {
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translate(-50%, 0);
   z-index: 10;
-
   width: 280px;
   min-height: 650px;
   height: auto;
@@ -47,9 +42,9 @@ body.stop-scroll {
   padding-bottom: 35px;
   background: $white-color;
   border-radius: 4px;
+  display: inline-block;
 
   @media screen and (min-width: $breakpoint-tablet) {
-    top: 95px;
     margin: 0 auto;
     width: 704px;
     min-height: 420px;
@@ -58,10 +53,10 @@ body.stop-scroll {
     padding-bottom: 40px;
     padding-left: 36px;
     padding-right: 70px;
+    display: block;
   }
 
   @media screen and (min-width: $breakpoint-decktop) {
-    top: 125px;
     margin: 0 auto;
     width: 806px;
     height: auto;
@@ -105,6 +100,21 @@ body.stop-scroll {
   }
 
   @media screen and (min-width: $breakpoint-decktop) {
+  }
+}
+
+.modal__wrapper--padding {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translate(-50%);
+  padding-bottom: 50px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    top: 95px;
+    padding-bottom: 95px;
+  }
+  @media screen and (min-width: $breakpoint-decktop) {
+    top: 125px;
   }
 }
 
